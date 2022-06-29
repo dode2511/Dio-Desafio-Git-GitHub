@@ -1,5 +1,5 @@
 "use strict";
-//selectin elements
+
 const score0EL = document.getElementById("score--0");
 const score1EL = document.getElementById("score--1");
 const diceEl = document.querySelector(".dice");
@@ -10,7 +10,7 @@ const player1El = document.querySelector(".player--1");
 const btnRollDice = document.querySelector(".btn--roll");
 const btnHold = document.querySelector(".btn--hold");
 const btnNew = document.querySelector(".btn--new");
-// start conditinals
+
 score0EL.textContent = 0;
 score1EL.textContent = 0;
 diceEl.classList.add("hidden");
@@ -57,7 +57,7 @@ btnHold.addEventListener("click", function () {
     }
   }
 });
-//roll button function
+
 btnRollDice.addEventListener("click", function () {
   if (playing) {
     let num = Math.trunc(Math.random() * 6 + 1);
@@ -69,11 +69,11 @@ btnRollDice.addEventListener("click", function () {
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
     } else {
-      // player switch
       switchPalyer();
     }
   }
 });
+
 function switchPalyer() {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   currentScore = 0;
